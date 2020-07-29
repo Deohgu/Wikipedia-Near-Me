@@ -1,9 +1,11 @@
 import React from "react";
-import styles "./GpsIcon.module.css";
+import styled from "styled-components";
 
 const GpsIcon = () => {
   return (
-  
+    <>
+      <button>GPS</button>
+    </>
   );
 };
 
