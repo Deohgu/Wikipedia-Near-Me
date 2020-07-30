@@ -10,9 +10,10 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      return await apiTesting();
+      const fetchedData = await apiTesting();
+      setArticles(fetchedData);
     };
-    setArticles(fetchData());
+    fetchData();
   }, []);
 
   return (
