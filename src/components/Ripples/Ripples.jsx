@@ -5,9 +5,13 @@ const Ripples = (props) => {
   return (
     <>
       {console.log(props.articles)}
-      { props.articles.map((curr) => (
-          <h1>{curr.title}</h1>
-        ))}
+      {props.articles.map((curr) => (
+        <a
+          href={"https://en.wikipedia.org/wiki/" + curr.title.replace(" ", "_")}
+        >
+          {curr.title}
+        </a>
+      ))}
     </>
   );
 };
