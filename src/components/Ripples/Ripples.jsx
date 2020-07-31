@@ -5,13 +5,18 @@ const Ripples = (props) => {
   return (
     <>
       {console.log(props.articles)}
-      {props.articles.map((curr) => (
-        <a
-          href={"https://en.wikipedia.org/wiki/" + curr.title.replace(" ", "_")}
-        >
-          {curr.title}
-        </a>
-      ))}
+      {props.articles !== undefined
+        ? props.articles.map((curr) => (
+            <a
+              href={
+                "https://en.wikipedia.org/wiki/" + curr.title.replace(" ", "_")
+              }
+            >
+              {curr.title}
+            </a>
+          ))
+        : console.log("Props.articles undefined.")}
+      <h1>{props.dummy + " Dummy test"}</h1>
     </>
   );
 };
