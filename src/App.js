@@ -7,19 +7,23 @@ import { apiTesting } from "./api";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
+  const [location, setLocation] = useState("");
+  const [dummy, setDummy] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
-      const fetchedData = await apiTesting();
+      const fetchedData = await apiTesting(location);
       setArticles(fetchedData);
     };
     fetchData();
-  }, []);
+  }, [location]);
+
+  console.log(`location = ${location}`);
 
   return (
     <>
-      <GpsIcon />
-      <Ripples articles={articles} />
+      <GpsIcon setLocation={setLocation} testDisplay={setDummy} />
+      <Ripples articles={articles} dummy={dummy} />
     </>
   );
 };
