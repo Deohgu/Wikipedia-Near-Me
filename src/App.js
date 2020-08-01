@@ -8,7 +8,6 @@ import { apiTesting } from "./api";
 const App = () => {
   const [articles, setArticles] = useState([]);
   const [location, setLocation] = useState("");
-  const [dummy, setDummy] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,8 +21,8 @@ const App = () => {
 
   return (
     <>
-      <GpsIcon setLocation={setLocation} testDisplay={setDummy} />
-      <Ripples articles={articles} dummy={dummy} />
+      <GpsIcon setLocation={setLocation} />
+      <Ripples articles={articles} />
     </>
   );
 };

@@ -16,7 +16,6 @@ const Ripples = (props) => {
             </a>
           ))
         : console.log("Props.articles undefined.")}
-      <h1>{props.dummy + " Dummy test"}</h1>
     </>
   );
 };
