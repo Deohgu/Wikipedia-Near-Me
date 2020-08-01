@@ -8,6 +8,7 @@ const GpsIcon = (props) => {
   // When run asks for current position and callsback a function and gives it the value as a parameter
   const testing = () => {
     navigator.geolocation.getCurrentPosition(testingOutput);
+    navigator.geolocation.watchPosition(testWatchPosition);
   };
 
   // function called in testing which gets data in the parameter from navigator.geolocation.getCurrentPosition
@@ -19,6 +20,9 @@ const GpsIcon = (props) => {
     props.setLocation(
       position.coords.latitude + "%7C" + position.coords.longitude
     );
+  };
+
+  const testWatchPosition = (position) => {
     props.testDisplay(position.coords.heading);
   };
 
