@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/wikipedia-near-me/static/js/main.5d28d7ad.chunk.js",
-    "main.js.map": "/wikipedia-near-me/static/js/main.5d28d7ad.chunk.js.map",
+    "main.js": "/wikipedia-near-me/static/js/main.2a65c153.chunk.js",
+    "main.js.map": "/wikipedia-near-me/static/js/main.2a65c153.chunk.js.map",
     "runtime-main.js": "/wikipedia-near-me/static/js/runtime-main.87a3d538.js",
     "runtime-main.js.map": "/wikipedia-near-me/static/js/runtime-main.87a3d538.js.map",
     "static/js/2.55e503e5.chunk.js": "/wikipedia-near-me/static/js/2.55e503e5.chunk.js",
     "static/js/2.55e503e5.chunk.js.map": "/wikipedia-near-me/static/js/2.55e503e5.chunk.js.map",
     "index.html": "/wikipedia-near-me/index.html",
-    "precache-manifest.8af1061fc8c95118374efdcf2b6fef0d.js": "/wikipedia-near-me/precache-manifest.8af1061fc8c95118374efdcf2b6fef0d.js",
+    "precache-manifest.6b6c71f5f8275cdb0d7ca4933601efc8.js": "/wikipedia-near-me/precache-manifest.6b6c71f5f8275cdb0d7ca4933601efc8.js",
     "service-worker.js": "/wikipedia-near-me/service-worker.js",
     "static/js/2.55e503e5.chunk.js.LICENSE.txt": "/wikipedia-near-me/static/js/2.55e503e5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.87a3d538.js",
     "static/js/2.55e503e5.chunk.js",
-    "static/js/main.5d28d7ad.chunk.js"
+    "static/js/main.2a65c153.chunk.js"
   ]
 }
