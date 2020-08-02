@@ -17,8 +17,6 @@ export const apiTesting = async (location) => {
     } = await fetchData.json();
     console.log(geosearch);
     return geosearch;
-  } else {
-    console.log("Location in api undefined.");
   }
   // })();
 };
