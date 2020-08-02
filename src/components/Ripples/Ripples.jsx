@@ -4,18 +4,18 @@ import styled from "styled-components";
 const Ripples = (props) => {
   return (
     <>
-      {console.log(props.articles)}
       {props.articles !== undefined
-        ? props.articles.map((curr) => (
+        ? props.articles.map((curr, index) => (
             <a
+              key={index}
               href={
                 "https://en.wikipedia.org/wiki/" + curr.title.replace(" ", "_")
               }
             >
-              {curr.title}
+              {`${curr.title}     (${curr.lat}, ${curr.lon})     `}
             </a>
           ))
-        : console.log("Props.articles undefined.")}
+        : null}
     </>
   );
 };
