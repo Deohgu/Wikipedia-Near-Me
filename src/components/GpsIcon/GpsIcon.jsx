@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { Icon } from "./GpsIcon.styled";
 
 // Next thing is to check out the Geolocation.watchPosition() for the heading option to see if the compass would work.
 // https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition
@@ -24,7 +24,7 @@ const GpsIcon = (props) => {
   // onClick runs a function
   return (
     <>
-      <button onClick={testing}>GPS</button>
+      <Icon onClick={testing}>GPS</Icon>
     </>
   );
 };
