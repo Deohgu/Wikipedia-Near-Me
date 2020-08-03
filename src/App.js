@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Wrapper } from "./App.styled";
+import { GlobalStyle, Wrapper } from "./App.styled";
 
 import GpsIcon from "./components/GpsIcon/GpsIcon";
 import Ripples from "./components/Ripples/Ripples";
@@ -19,10 +19,13 @@ const App = () => {
   }, [location]);
 
   return (
-    <Wrapper>
-      <GpsIcon setLocation={setLocation} />
-      <Ripples articles={articles} />
-    </Wrapper>
+    <>
+      <GlobalStyle />
+      <Wrapper>
+        <GpsIcon setLocation={setLocation} />
+        <Ripples articles={articles} />
+      </Wrapper>
+    </>
   );
 };
 
