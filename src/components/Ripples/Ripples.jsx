@@ -13,6 +13,8 @@ const Ripples = (props) => {
               href={
                 "https://en.wikipedia.org/wiki/" + curr.title.replace(" ", "_")
               }
+              lat={curr.lat}
+              long={curr.lon}
             >
               {`${curr.title}     (${curr.lat}, ${curr.lon})     `}
             </Locations>
