@@ -8,22 +8,23 @@ import { apiTesting } from "./api";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
-  const [location, setLocation] = useState("");
+  const [lat, setLat] = useState("");
+  const [lon, setLon] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
-      const fetchedData = await apiTesting(location);
+      const fetchedData = await apiTesting(lat + "%7C" + lon);
       setArticles(fetchedData);
     };
     fetchData();
-  }, [location]);
+  }, [lat && lon]);
 
   return (
     <>
       <GlobalStyle />
       <Wrapper>
-        <GpsIcon setLocation={setLocation} />
-        <Ripples articles={articles} />
+        <GpsIcon setLat={setLat} setLon={setLon} />
+        <Ripples articles={articles} lat={lat} lon={lon} />
       </Wrapper>
     </>
   );
