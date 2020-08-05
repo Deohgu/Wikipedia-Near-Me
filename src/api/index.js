@@ -10,7 +10,7 @@ export const apiTesting = async (location) => {
   // Not sure if I need to pass to articles here, remains to be seen later.
   // It wasn't working because of this IIFE
   // (async () => {
-  if (location !== "") {
+  if (location !== "%7C") {
     const fetchData = await fetch(url);
     const {
       query: { geosearch },
