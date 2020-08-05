@@ -16,9 +16,10 @@ const GpsIcon = (props) => {
     console.log(
       `Latitude = ${position.coords.latitude}, Longitude = ${position.coords.longitude}, Facing = ${position.coords.heading}`
     );
-    props.setLocation(
-      position.coords.latitude + "%7C" + position.coords.longitude
-    );
+    props.setLat(
+      position.coords.latitude);
+    props.setLon(
+      position.coords.longitude);
   };
 
   // onClick runs a function
