@@ -14,6 +14,7 @@ const mapHeightMet = 2000;
 
 // This method of math doesn't seem to work. they all land on top of each other. But the test in the last bit shows that it could work.
 // back to the sketchbook
+// NO, they all have the same number, the way it's structured here must be the problem otherwise the number would at least vary.
 
 export const Locations = styled.a`
   ${(props) => (props.indx === 3 ? "background-color: red;" : null)}
