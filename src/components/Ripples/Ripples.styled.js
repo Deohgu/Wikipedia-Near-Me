@@ -12,9 +12,7 @@ const mapHeightMet = 2000;
 
 // Then do the same for longitude or adapt it to work with both.
 
-// This method of math doesn't seem to work. they all land on top of each other. But the test in the last bit shows that it could work.
-// back to the sketchbook
-// NO, they all have the same number, the way it's structured here must be the problem otherwise the number would at least vary.
+// This method of math doesn't seem to work. they all land on top of each other. Meaning that the scale is not adapted. And why are all of the in a similar place? They should be scatered.
 
 export const Locations = styled.a`
   ${(props) => (props.indx === 3 ? "background-color: red;" : null)}
@@ -22,19 +20,21 @@ export const Locations = styled.a`
   position: absolute;
   left: ${(props) => {
     return (
-      (((props.lat * ((1 * mapWidthMet) / 111.32)) / 2 / props.lat) *
+      (((props.articleLat * ((1 * mapWidthMet) / 111.32)) / 2 / props.lat) *
         window.innerWidth) /
       ((1 * mapWidthMet) / 111.32)
     );
   }}px;
 
   ${(props) => {
-    return console.log(props.lat);
+    return console.log(
+      `Article lat: ${props.articleLat}   own lat ${props.lat}`
+    );
   }}
 
   top: ${(props) => {
     return (
-      (((props.lon * ((1 * mapHeightMet) / 111.32)) / 2 / props.lon) *
+      (((props.articleLon * ((1 * mapHeightMet) / 111.32)) / 2 / props.lon) *
         window.innerHeight) /
       ((1 * mapHeightMet) / 111.32)
     );
