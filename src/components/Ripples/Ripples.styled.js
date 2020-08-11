@@ -17,38 +17,9 @@ const mapHeightMet = 2000;
 export const Locations = styled.a`
   ${(props) => (props.indx === 3 ? "background-color: red;" : null)}
   color: black;
-  position: absolute;
-  left: ${(props) => {
-    return (
-      (((props.articleLat * ((1 * mapWidthMet) / 111.32)) / 2 / props.lat) *
-        window.innerWidth) /
-      ((1 * mapWidthMet) / 111.32)
-    );
-  }}px;
+`;
 
-  ${(props) => {
-    return console.log(
-      `Article lat: ${props.articleLat}   own lat ${props.lat}`
-    );
-  }}
-
-  top: ${(props) => {
-    return (
-      (((props.articleLon * ((1 * mapHeightMet) / 111.32)) / 2 / props.lon) *
-        window.innerHeight) /
-      ((1 * mapHeightMet) / 111.32)
-    );
-  }}px;
-  ${console.log(
-    (((-1.1743196999999999 * ((1 * mapHeightMet) / 111.32)) /
-      2 /
-      -1.1743196999999999) *
-      736) /
-      ((1 * mapHeightMet) / 111.32)
-  )};
-  
-  /* Showing that it works if done right */
-  /* top: ${(props) => {
-    return props.indx * 30;
-  }}px; */
+export const MapStyled = styled.div`
+  width: 100vw;
+  height: 100vh;
 `;
