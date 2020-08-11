@@ -5,4 +5,5 @@ export const Icon = styled.button`
   position: absolute;
   top: calc(50% - (18px / 2));
   right: calc(50% - (36.156px / 2));
+  z-index: 2;
 `;

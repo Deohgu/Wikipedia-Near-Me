@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Map } from "react-leaflet";
 
 const mapWidthMet = 1000;
 const mapHeightMet = 2000;
@@ -19,7 +20,8 @@ export const Locations = styled.a`
   color: black;
 `;
 
-export const MapStyled = styled.div`
+export const MapStyled = styled(Map)`
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 `;
