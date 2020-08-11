@@ -1,13 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import L from "leaflet";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { TileLayer, Marker, Popup } from "react-leaflet";
 
 import { Locations, MapStyled } from "./Ripples.styled";
 
 const Ripples = (props) => {
   return (
-    <Map style={{ height: 100 + "vh" }}>
+    <MapStyled
+      center={[Number(props.lat), Number(props.lon)]}
+      zoom={props.zoom}
+    >
+      <TileLayer
+        attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      {/* MapStyled === Map of react-leaflet */}
       <h1 style={{ margin: 0 }}>{`${props.lat} ${props.lon}`}</h1>
       {props.articles !== undefined
         ? props.articles.map((curr, index) => (
@@ -26,7 +34,7 @@ const Ripples = (props) => {
             </Locations>
           ))
         : null}
-    </Map>
+    </MapStyled>
   );
 };
 
