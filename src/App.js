@@ -10,6 +10,7 @@ const App = () => {
   const [articles, setArticles] = useState([]);
   const [lat, setLat] = useState("");
   const [lon, setLon] = useState("");
+  const [zoom, setZoom] = useState("13");
 
   useEffect(() => {
     const fetchData = async () => {
