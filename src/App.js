@@ -10,7 +10,7 @@ const App = () => {
   const [articles, setArticles] = useState([]);
   const [lat, setLat] = useState("");
   const [lon, setLon] = useState("");
-  const [zoom, setZoom] = useState("13");
+  const [zoom, setZoom] = useState(13);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +25,7 @@ const App = () => {
       <GlobalStyle />
       <Wrapper>
         <GpsIcon setLat={setLat} setLon={setLon} />
-        <Ripples articles={articles} lat={lat} lon={lon} />
+        <Ripples articles={articles} lat={lat} lon={lon} zoom={zoom} />
       </Wrapper>
     </>
   );
