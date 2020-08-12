@@ -1,9 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import L from "leaflet";
 import { TileLayer, Marker, Popup } from "react-leaflet";
 
-import { Locations, MapStyled } from "./Ripples.styled";
+import { MapStyled } from "./Ripples.styled";
+
+const myIcon = L.icon({
+  iconUrl: "https://image.flaticon.com/icons/svg/49/49360.svg",
+  iconSize: [25, 41],
+  iconAnchor: [12.5, 41],
+  popupAnchor: [0, -41],
+});
 
 const Ripples = (props) => {
   return (
@@ -11,27 +17,24 @@ const Ripples = (props) => {
       center={[Number(props.lat), Number(props.lon)]}
       zoom={props.zoom}
     >
+      {/* MapStyled === Map of react-leaflet */}
       <TileLayer
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {/* MapStyled === Map of react-leaflet */}
-      <h1 style={{ margin: 0 }}>{`${props.lat} ${props.lon}`}</h1>
       {props.articles !== undefined
         ? props.articles.map((curr, index) => (
-            <Locations
-              key={index}
-              indx={index}
-              href={
-                "https://en.wikipedia.org/wiki/" + curr.title.replace(" ", "_")
-              }
-              articleLat={curr.lat}
-              articleLon={curr.lon}
-              lat={props.lat}
-              lon={props.lon}
+            <Marker
+              position={[curr.lat, curr.lon]}
+              key={"coords" + index}
+              icon={myIcon}
             >
-              {`${curr.title}     (${curr.lat}, ${curr.lon})     `}
-            </Locations>
+              <Popup>
+                <a href={"https://en.wikipedia.org/wiki/" + curr.title}>
+                  {curr.title}
+                </a>
+              </Popup>
+            </Marker>
           ))
         : null}
     </MapStyled>
