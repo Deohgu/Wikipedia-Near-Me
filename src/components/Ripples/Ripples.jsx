@@ -13,10 +13,7 @@ const myIcon = L.icon({
 
 const Ripples = (props) => {
   return (
-    <MapStyled
-      center={[Number(props.lat), Number(props.lon)]}
-      zoom={props.zoom}
-    >
+    <MapStyled center={props.coords} zoom={props.zoom}>
       {/* MapStyled === Map of react-leaflet */}
       <TileLayer
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
