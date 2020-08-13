@@ -1,1 +1,1 @@
-export LeafletMap from "./LeafletMap/LeafletMap";
+export { LeafletMap } from "./LeafletMap/LeafletMap";
