@@ -5,6 +5,11 @@ import { GlobalStyle } from "./App.styled";
 import { LeafletMap } from "./components/LeafletMap/LeafletMap";
 import { articlesFetch } from "./api";
 
+// To Do
+// Adjust zoom to fit all the markers inside the map. Leaflet as a method for it:
+// https://leafletjs.com/examples/zoom-levels/
+// fitBounds(bounds), automatically calculates the zoom to fit a rectangular area on the map
+
 const App = () => {
   const [articles, setArticles] = useState([]);
   const [coords, setCoords] = useState([15.925994, -37.193399]); // Visually Neutral/Sea
