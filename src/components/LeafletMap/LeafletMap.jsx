@@ -11,6 +11,7 @@ const myIcon = L.icon({
 });
 
 export const LeafletMap = (props) => {
+  // Being used for testing purposes only.
   const testTest = [
     [38.858494, -9.081971],
     [38.877043, -9.063705],
@@ -18,22 +19,32 @@ export const LeafletMap = (props) => {
     [38.849149, -9.056733],
   ];
 
-  const emptyArray = [
-    props.articles !== undefined
-      ? props.articles.map((curr) => [curr.lat, curr.lon])
-      : null,
-  ];
+  // Dummy coords to not output an error when receiving an empty bounds.
+  //  Side note idea - Can javascript be added before bounds to define if bounds will be given or not?
+  let emptyArray = [[29.925994, -39.193599]];
+
+  if (props.articles !== undefined) {
+    props.articles.map((curr) => emptyArray.push([curr.lat, curr.lon]));
+  }
+
+  // Seems to work only in a separate if statment so be it
+  if (emptyArray.length === 11) {
+    emptyArray = emptyArray.splice(1);
+  }
+
+  // Value seems correct now but it focuses only on one of the values.
   console.log(emptyArray);
 
   return (
     <MapStyled
-      // center={props.coords}
+      center={props.coords}
       // zoom={props.zoom}
+      zoomSnap={0.1}
       // It's working with this!
       bounds={latLngBounds(emptyArray)}
       // Replace with this to confirm that it is working.
       // bounds={latLngBounds(testTest)}
-      // boundsOptions={{padding: [50, 50]}}
+      boundsOptions={{ padding: [40, 40] }}
     >
       {/* MapStyled = Map component of react-leaflet */}
       <TileLayer
