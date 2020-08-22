@@ -1,5 +1,12 @@
 import React from "react";
-import L, { latLngBounds } from "leaflet";
+import L, {
+  latLngBounds,
+  bounds,
+  point,
+  fitBounds,
+  getBounds,
+  latLng,
+} from "leaflet";
 import { TileLayer, Marker, Popup } from "react-leaflet";
 
 import { MapStyled } from "./LeafletMap.styled";
@@ -45,6 +52,14 @@ export const LeafletMap = (props) => {
       // Replace with this to confirm that it is working.
       // bounds={latLngBounds(testTest)}
       boundsOptions={{ padding: [40, 40] }}
+      // Testing till it works it testTest.
+      // Seems like it it gives off the same error as using the testTest, meaning that point() might be working.
+      // maxBounds={latLngBounds(testTest)}
+      // maxBounds={testTest}
+      // maxBoundsViscosity={1.0}
+      // Locking worked.
+      dragging={false}
+      zoomControl={false}
     >
       {/* MapStyled = Map component of react-leaflet */}
       <TileLayer
