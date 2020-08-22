@@ -45,20 +45,17 @@ export const LeafletMap = (props) => {
   return (
     <MapStyled
       center={props.coords}
-      // zoom={props.zoom}
+      zoom={props.zoom}
       zoomSnap={0.1}
-      // It's working with this!
-      bounds={latLngBounds(emptyArray)}
-      // Replace with this to confirm that it is working.
-      // bounds={latLngBounds(testTest)}
-      boundsOptions={{ padding: [40, 40] }}
-      // Testing till it works it testTest.
-      // Seems like it it gives off the same error as using the testTest, meaning that point() might be working.
-      // maxBounds={latLngBounds(testTest)}
-      // maxBounds={testTest}
+      // bounds={latLngBounds(emptyArray)}
+
+      // boundsOptions={{ padding: [40, 40] }}
+
+      // Need to adapt zoom like bounds.
+      maxBounds={latLngBounds(emptyArray)}
       // maxBoundsViscosity={1.0}
       // Locking worked.
-      dragging={false}
+      // dragging={false}
       zoomControl={false}
     >
       {/* MapStyled = Map component of react-leaflet */}
