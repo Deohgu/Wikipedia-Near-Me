@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "15d39f91b9ca1e667996356cbd1099e1",
+    "revision": "45a13a1fd518267cd4c2884ac5ca707a",
     "url": "/wikipedia-near-me/index.html"
   },
   {
-    "revision": "c3b83b998d190839f9f6",
+    "revision": "4d0e648906a659f42b58",
     "url": "/wikipedia-near-me/static/css/2.7c35e809.chunk.css"
   },
   {
-    "revision": "c3b83b998d190839f9f6",
-    "url": "/wikipedia-near-me/static/js/2.e570f195.chunk.js"
+    "revision": "4d0e648906a659f42b58",
+    "url": "/wikipedia-near-me/static/js/2.1f23a06b.chunk.js"
   },
   {
     "revision": "da75538c52411804769b514107a743de",
-    "url": "/wikipedia-near-me/static/js/2.e570f195.chunk.js.LICENSE.txt"
+    "url": "/wikipedia-near-me/static/js/2.1f23a06b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9aa484a359f10e8f951d",
-    "url": "/wikipedia-near-me/static/js/main.27bf2b5b.chunk.js"
+    "revision": "79453108631508839dcb",
+    "url": "/wikipedia-near-me/static/js/main.e211b366.chunk.js"
   },
   {
     "revision": "dc16e4334fb36af89b84",
